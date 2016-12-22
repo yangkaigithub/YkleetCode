@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="ykmatlab2java" level="project" />
+    <orderEntry type="library" name="javabuilder" level="project" />
   </component>
 </module>

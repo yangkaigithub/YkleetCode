@@ -6,7 +6,7 @@ public class EnumTest {
     public static void main(String[] args){
 
         TrafficLight tl = TrafficLight.Green;
-        Peason p = new Peason();
+        Person p = new Person();
 
         System.out.println(tl.name());
         System.out.println();

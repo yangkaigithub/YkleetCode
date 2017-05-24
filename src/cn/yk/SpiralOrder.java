@@ -9,6 +9,7 @@ import java.util.List;
 public class SpiralOrder {
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> list = new ArrayList<Integer>();
+
         try{
             if(matrix==null||matrix[0]==null){
                 return list;

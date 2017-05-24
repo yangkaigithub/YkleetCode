@@ -13,7 +13,6 @@ public class SubsetsII {
         List<Integer> each = new ArrayList<>();
         helper(res, each, 0, nums);
         return res;
-        Integer.MAX_VALUE
     }
     public void helper(List<List<Integer>> res, List<Integer> each, int pos, int[] n) {
         if (pos <= n.length) {
@@ -27,7 +26,7 @@ public class SubsetsII {
             i++;
             while (i < n.length && n[i] == n[i - 1]) {i++;}
         }
-        return;
+
     }
 
 

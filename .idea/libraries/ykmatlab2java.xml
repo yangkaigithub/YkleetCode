@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="ykmatlab2java">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../ykmatlab2java/for_redistribution_files_only/ykmatlab2java.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>

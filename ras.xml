@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dbConfig>
+	<xmlVersion>1.0</xmlVersion>	
+	<!--xml文件名必须与appType的code一致，下面两应用配置必须存在且为1对1-->
+	<vision.apollo.app.domain.AppType code="ras" name="电动车管控应用系统" iconId="6" serverType='1' status='1' persist='1' remark="电动车管控应用系统" createTime="2016-12-15 00:00:00" updateTime="2016-04-04 09:12:24"></vision.apollo.app.domain.AppType>
+	<vision.apollo.ups.domain.AppSystem code="100026" name="电动车管控应用系统" url="ras" status='1' persist='1' remark="电动车管控应用系统"  typeCode="ras" createTime="2016-12-15 00:00:00"></vision.apollo.ups.domain.AppSystem>	
+	<!--以下记录可以为多条-->
+	<!--应用的网域映射-->
+	<vision.apollo.app.domain.AppService code="1200" appCode="100026" domainCode="100001" ip="127.0.0.1" serverPort="1293" httpPort="7777" persist='1' protocol="rmi"></vision.apollo.app.domain.AppService>
+	<!-- ras权限-->
+	<vision.apollo.ups.domain.AuthElement code="RAS_000000" appTypeCode="ras" name="电动车管控应用系统" parentCode="00000" nodeTree=",00000,RAS_000000," dataAuth="0" type="0" status="1" persist="1" weight="0" remark="无线网络终端信息采集应用系统" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_010000" appTypeCode="ras" name="轨迹分析" parentCode="RAS_000000" nodeTree=",00000,RAS_000000,RAS_010000," dataAuth="0" type="2" status="1" persist="1" weight="99" remark="轨迹分析功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_020000" appTypeCode="ras" name="综合查询" parentCode="RAS_000000" nodeTree=",00000,RAS_000000,RAS_020000," dataAuth="0" type="2" status="1" persist="1" weight="98" remark="综合查询功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_030000" appTypeCode="ras" name="车辆布控" parentCode="RAS_000000" nodeTree=",00000,RAS_000000,RAS_030000," dataAuth="0" type="2" status="1" persist="1" weight="97" remark="车辆布控功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_040000" appTypeCode="ras" name="统计分析" parentCode="RAS_000000" nodeTree=",00000,RAS_000000,RAS_040000," dataAuth="0" type="2" status="1" persist="1" weight="96" remark="统计分析功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_050000" appTypeCode="ras" name="备案登记" parentCode="RAS_000000" nodeTree=",00000,RAS_000000,RAS_050000," dataAuth="0" type="2" status="1" persist="1" weight="95" remark="备案登记功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_060000" appTypeCode="ras" name="标签管理" parentCode="RAS_000000" nodeTree=",00000,RAS_000000,RAS_060000," dataAuth="0" type="2" status="1" persist="1" weight="94" remark="标签管理功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_060100" appTypeCode="ras" name="未处理申请" parentCode="RAS_060000" nodeTree=",00000,RAS_000000,RAS_060000,RAS_060100," dataAuth="1" type="2" status="1" persist="1" weight="95" remark="未处理申请功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_060200" appTypeCode="ras" name="历史申请" parentCode="RAS_060000" nodeTree=",00000,RAS_000000,RAS_060000,RAS_060200," dataAuth="1" type="2" status="1" persist="1" weight="95" remark="历史申请功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_060300" appTypeCode="ras" name="标签列表" parentCode="RAS_060000" nodeTree=",00000,RAS_000000,RAS_060000,RAS_060300," dataAuth="1" type="2" status="1" persist="1" weight="95" remark="标签列表功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_060400" appTypeCode="ras" name="标签申请" parentCode="RAS_060000" nodeTree=",00000,RAS_000000,RAS_060000,RAS_060400," dataAuth="1" type="2" status="1" persist="1" weight="95" remark="标签申请功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+	<vision.apollo.ups.domain.AuthElement code="RAS_070000" appTypeCode="ras" name="设备管理" parentCode="RAS_000000" nodeTree=",00000,RAS_000000,RAS_070000," dataAuth="1" type="2" status="1" persist="1" weight="93" remark="设备管理功能的权限" createTime="2013-09-16 16:33:57"></vision.apollo.ups.domain.AuthElement>
+
+	<!-- ras菜单 -->
+	<vision.apollo.ups.domain.MenuTemplate code="ras_01" name="轨迹分析" appTypeCode="ras" parentCode="0" url="/analysis/index" iconUrl="analysis" authCode="RAS_010000" openType="2" nodeTree=",0,ras_01," display="1" remark="/analysis/index" weight="99" />
+	<vision.apollo.ups.domain.MenuTemplate code="ras_02" name="综合查询" appTypeCode="ras" parentCode="0" url="/query/index" iconUrl="query" authCode="RAS_020000" openType="2" nodeTree=",0,ras_02," display="1" remark="/query/index" weight="98" />
+	<vision.apollo.ups.domain.MenuTemplate code="ras_03" name="车辆布控" appTypeCode="ras" parentCode="0" url="/surveillances/index" iconUrl="surveillance" authCode="RAS_030000" openType="2" nodeTree=",0,ras_03," display="1" remark="/surveillances/index" weight="97" />
+	<vision.apollo.ups.domain.MenuTemplate code="ras_04" name="统计分析" appTypeCode="ras" parentCode="0" url="/datachart/index" iconUrl="datachart" authCode="RAS_040000" openType="2" nodeTree=",0,ras_04," display="1" remark="/datachart/index" weight="96" />
+	<vision.apollo.ups.domain.MenuTemplate code="ras_05" name="备案登记" appTypeCode="ras" parentCode="0" url="/vehicle/index" iconUrl="vehicle" authCode="RAS_050000" openType="2" nodeTree=",0,ras_05," display="1" remark="/vehicle/index" weight="95" />
+	<vision.apollo.ups.domain.MenuTemplate code="ras_06" name="标签管理" appTypeCode="ras" parentCode="0" url="/tag/index" iconUrl="tag" authCode="RAS_060000" openType="2" nodeTree=",0,ras_06," display="1" remark="/tag/index" weight="94" />
+	<vision.apollo.ups.domain.MenuTemplate code="ras_0601" name="未处理申请" appTypeCode="ras" parentCode="ras_06" url="" iconUrl="tag" authCode="RAS_060100" openType="2" nodeTree=",0,ras_06,ras_0601," display="1" remark="t-1" weight="94"/>
+	<vision.apollo.ups.domain.MenuTemplate code="ras_0602" name="历史申请" appTypeCode="ras" parentCode="ras_06" url="" iconUrl="tag" authCode="RAS_060200" openType="2" nodeTree=",0,ras_06,ras_0602," display="1" remark="t-2" weight="93"/>
+	<vision.apollo.ups.domain.MenuTemplate code="ras_0603" name="标签列表" appTypeCode="ras" parentCode="ras_06" url="" iconUrl="tag" authCode="RAS_060300" openType="2" nodeTree=",0,ras_06,ras_0603," display="1" remark="t-3" weight="92"/>
+	<vision.apollo.ups.domain.MenuTemplate code="ras_0604" name="标签申请" appTypeCode="ras" parentCode="ras_06" url="" iconUrl="tag" authCode="RAS_060400" openType="2" nodeTree=",0,ras_06,ras_0604," display="1" remark="t-4" weight="91"/>
+	<vision.apollo.ups.domain.MenuTemplate code="ras_07" name="设备管理" appTypeCode="ras" parentCode="0" url="/device/index" iconUrl="device" authCode="RAS_070000" openType="2" nodeTree=",0,ras_07" display="1" remark="/device/index" weight="93" />
+
+	<!-- ras 数据字典类型 -->
+	<vision.apollo.publicservice.module.dict.domain.DataDictType code='ras_1' parentCode='0' defaultValue='' caption='采集设备类型' appCode='ras' creator='admin' createTime='2016-12-15 00:00:00'  updateTime='2016-12-15 00:00:00'></vision.apollo.publicservice.module.dict.domain.DataDictType>
+	<vision.apollo.publicservice.module.dict.domain.DataDictType code='ras_2' parentCode='0' defaultValue='' caption='布控时间' appCode='ras' creator='admin' createTime='2016-12-15 00:00:00'  updateTime='2016-12-15 00:00:00'></vision.apollo.publicservice.module.dict.domain.DataDictType>
+	<vision.apollo.publicservice.module.dict.domain.DataDictType code='ras_3' parentCode='0' defaultValue='' caption='布控原因' appCode='ras' creator='admin' createTime='2016-12-15 00:00:00'  updateTime='2016-12-15 00:00:00'></vision.apollo.publicservice.module.dict.domain.DataDictType>
+	<vision.apollo.publicservice.module.dict.domain.DataDictType code='ras_4' parentCode='0' defaultValue='' caption='颜色' appCode='ras' creator='admin' createTime='2016-12-15 00:00:00'  updateTime='2016-12-15 00:00:00'></vision.apollo.publicservice.module.dict.domain.DataDictType>
+	<!-- ras 数据字典项 -->
+   	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_1" key="ras.ras_1.1" value="1" name="固定采集设备" label="固定采集设备" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_1" key="ras.ras_1.2" value="2" name="移动车载采集设备" label="移动车载采集设备" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_1" key="ras.ras_1.3" value="3" name="单兵采集设备" label="单兵采集设备" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_1" key="ras.ras_1.4" value="9" name="其他" label="其他" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_2" key="ras.ras_2.1" value="1" name="一天" label="一天" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_2" key="ras.ras_2.2" value="2" name="一周" label="一周" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_2" key="ras.ras_2.3" value="3" name="一个月" label="一个月" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_2" key="ras.ras_2.4" value="9" name="自定义" label="自定义" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_3" key="ras.ras_3.1" value="1" name="涉嫌犯罪" label="涉嫌犯罪" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_3" key="ras.ras_3.2" value="2" name="在逃人员" label="在逃人员" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_3" key="ras.ras_3.3" value="9" name="其他" label="其他" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_4" key="ras.ras_4.1" value="1" name="黑色" label="黑色" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_4" key="ras.ras_4.2" value="2" name="白色" label="白色" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_4" key="ras.ras_4.3" value="3" name="灰色" label="灰色" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_4" key="ras.ras_4.4" value="4" name="蓝色" label="黄色" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_4" key="ras.ras_4.5" value="5" name="黄色" label="黄色" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_4" key="ras.ras_4.6" value="6" name="绿色" label="绿色" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_4" key="ras.ras_4.7" value="7" name="红色" label="红色" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+	<vision.apollo.publicservice.module.dict.domain.DataDict typeCode="ras_4" key="ras.ras_4.8" value="8" name="紫色" label="紫色" used="1" creator="admin" remarks="" createTime="2016-12-15 00:00:00" updateTime="2016-12-15 00:00:00"/>
+
+
+	<!-- 应用类型扩展数据 -->
+	<vision.apollo.app.domain.AppFieldExt appType="ras" type="0" fieldName="dubbo" fieldType="text" dictType="" fieldDisplayName="dubbo端口" remark="" />
+	<vision.apollo.app.domain.AppExt appType="ras" appCode="100026" domainCode="100001" extFieldName="dubbo" extFieldValue="20893" />
+	<vision.apollo.app.domain.AppFieldExt appType="ras" type="0" fieldName="https" fieldType="text" dictType="" fieldDisplayName="https端口" remark="" />
+	<vision.apollo.app.domain.AppExt appType="ras" appCode="100026" domainCode="100001" extFieldName="https" extFieldValue="443" />
+</dbConfig>

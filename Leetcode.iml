@@ -9,6 +9,18 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="ykmatlab2java" level="project" />
     <orderEntry type="library" name="javabuilder" level="project" />
+<<<<<<< 6a0c8dd38f7fcb8f9014c2bf8693b6d3b52d02b9
     <orderEntry type="library" name="addTwoNum" level="project" />
+=======
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/dev/repositorys/maven/repo/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+>>>>>>> 2017年11月9日14:11:26
   </component>
 </module>

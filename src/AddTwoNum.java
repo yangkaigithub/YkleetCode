@@ -69,6 +69,7 @@ public class AddTwoNum {
 
             ListNode(int x) {
                 val = x;
+				val = x;
             }
         }
 

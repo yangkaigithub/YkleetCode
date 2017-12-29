@@ -16,7 +16,7 @@ public class Permutations {
             }
         }
         return res;
-}
+    }
     public List<List<Integer>> permute2(int[] nums){
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
@@ -40,11 +40,7 @@ public class Permutations {
     }
 
 
-
-
-
     public static void main(String[] args) {
-
         new Permutations().permute2(new int[]{1,2,3});
     }
 }

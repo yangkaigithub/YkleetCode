@@ -7,7 +7,7 @@
         }
 }
     public class Person extends People{
-     public String str1 = "1223";
+     public String str1 = "12234";
      public String str2 = "jklb";
      public Person(){
          System.out.println("person's constractor");
